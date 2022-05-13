@@ -1,0 +1,109 @@
+# create test brownies step 1 in English, Spanish, and French
+###
+POST http://localhost:5000/translator HTTP/1.1
+content-type: application/json
+
+{
+    "id": "brownies-1",
+    "language": "English",
+    "message": "Begin by gathering all the ingredients"
+}
+
+###
+POST http://localhost:5000/translator HTTP/1.1
+content-type: application/json
+
+{
+    "id": "brownies-1",
+    "language": "French",
+    "message": "Commencez par rassembler tous les ingrédients"
+}
+
+###
+POST http://localhost:5000/translator HTTP/1.1
+content-type: application/json
+
+{
+    "id": "brownies-1",
+    "language": "French",
+    "message": "Comienza reuniendo todos los ingredientes"
+}
+
+###
+GET http://localhost:5000/translator?id=brownies-1&language=English HTTP/1.1
+
+
+# Create test brownies step 2 in Spanish English and French
+###
+POST http://localhost:5000/translator HTTP/1.1
+content-type: application/json
+
+{
+    "id": "brownies-2",
+    "language": "English",
+    "message": "Mix the eggs, water, sugar, and vanilla extract in a bowl"
+}
+
+###
+POST http://localhost:5000/translator HTTP/1.1
+content-type: application/json
+
+{
+    "id": "brownies-2",
+    "language": "French",
+    "message": "Melanger les oeufs, l'eau, le sucre et l'extrait de vanille dans un bol"
+}
+
+###
+POST http://localhost:5000/translator HTTP/1.1
+content-type: application/json
+
+{
+    "id": "brownies-2",
+    "language": "Spanish",
+    "message": "Mezclar los huevos, el agua, el azucar y el extracto de vainilla en un bol."
+}
+
+###
+POST http://localhost:5000/translator HTTP/1.1
+content-type: application/json
+
+{
+    "id": "pancakes-1",
+    "language": "English",
+    "message": "Sift the flour, baking powder, salt and sugar."
+}
+
+
+###
+POST http://localhost:5000/translator HTTP/1.1
+content-type: application/json
+
+{
+    "id": "pancakes-1",
+    "language": "French",
+    "message": "Tamiser la farine, la levure chimique, le sel et le sucre."
+}
+
+
+###
+POST http://localhost:5000/translator HTTP/1.1
+content-type: application/json
+
+{
+    "id": "pancakes-1",
+    "language": "Spanish",
+    "message": "Tamizar la harina, la levadura, la sal y el azúcar."
+}
+
+###
+GET http://localhost:5000/translator?id=brownies-2&language=English HTTP/1.1
+
+###
+GET http://localhost:5000/translator?id=brownies-2&language=Spanish HTTP/1.1
+
+###
+GET http://localhost:5000/translator?id=pancakes-1&language=English HTTP/1.1
+
+###
+GET http://localhost:5000/translator?id=pancakes-1&language=French HTTP/1.1
