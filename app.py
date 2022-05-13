@@ -8,7 +8,6 @@
 # You might see an error saying 'Import "flask" could not be resloved', but you can ignore it.
 
 # Run Instructions: To start the service, use command python -m flask run
-# Json id will be recipe-step# ie for step 1 of brownies, id would be brownies-1
 
 import json
 from flask import Flask, request
